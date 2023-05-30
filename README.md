@@ -3,22 +3,22 @@ MySQL does not support joint delete (update) and select operations on the same t
 在写leetcode时，遇见一个问题。（leetcode.196. 删除重复的电子邮箱）
 ![196  删除重复的电子邮箱](https://github.com/adcodeday/MySQL-does-not-support-joint-delete-update-and-select-operations-on-the-same-table/assets/130963605/86d00cec-762e-44e7-add7-210f49ec947b)
 
-DELETE FROM Person
-WHERE id NOT IN (
-    SELECT MIN(id)
-    FROM Person
-    GROUP BY email
-)
+DELETE FROM Person  
+WHERE id NOT IN (  
+    SELECT MIN(id)  
+    FROM Person  
+    GROUP BY email  
+)  
 代码报错：You can't specify target table 'Person' for update in FROM clause.
 
-DELETE FROM Person
-WHERE id NOT IN (
-    SELECT * FROM (
-        SELECT MIN(id)
-        FROM Person
-        GROUP BY email
-    ) AS temp
-)
+DELETE FROM Person  
+WHERE id NOT IN (  
+    SELECT * FROM (  
+        SELECT MIN(id)  
+        FROM Person  
+        GROUP BY email  
+    ) AS temp  
+)  
 成功.
 
 chatgpt给的解释:
