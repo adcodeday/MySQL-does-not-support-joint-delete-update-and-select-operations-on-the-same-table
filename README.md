@@ -1,5 +1,5 @@
 # MySQL-does-not-support-joint-delete-update-and-select-operations-on-the-same-table
-MySQL does not support joint delete (update) and select operations on the same table
+# Table 'table_name' is specified twice, both as a target for 'UPDATE' and as a separate source for data
 在写leetcode时，遇见一个问题。（leetcode.196. 删除重复的电子邮箱）
 ![196  删除重复的电子邮箱](https://github.com/adcodeday/MySQL-does-not-support-joint-delete-update-and-select-operations-on-the-same-table/assets/130963605/86d00cec-762e-44e7-add7-210f49ec947b)
 
